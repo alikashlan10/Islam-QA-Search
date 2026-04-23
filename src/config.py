@@ -30,7 +30,7 @@ class AppConfig(BaseSettings):
     TOP_N : int = 5
     
     ##Emebdding model
-    EMBEDDING_MODEL_NAME:str = ""
+    EMBEDDING_MODEL_NAME:str = "embed-multilingual-v3.0"
     COHERE_API_KEY:str = ""
     EMBEDDING_PROVIDER:     EmbedderProvider   = EmbedderProvider.COHERE
 

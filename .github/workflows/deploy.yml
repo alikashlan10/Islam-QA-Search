@@ -57,8 +57,3 @@ jobs:
             EMBEDDING_MODEL_NAME=embed-multilingual-v3.0
             LOG_LEVEL=INFO
             LOG_FILE=logs/app.log
-            API_KEY=secretref:API-KEY
-            QDRANT_URL=secretref:QDRANT-URL
-            QDRANT_API_KEY=secretref:QDRANT-API-KEY
-            COHERE_API_KEY=secretref:COHERE-API-KEY
-            GROQ_API_KEY=secretref:GROQ-API-KEY
