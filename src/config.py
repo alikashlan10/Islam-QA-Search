@@ -12,7 +12,7 @@ class AppConfig(BaseSettings):
     LOG_FILE:str = "logs/app.log"
 
     # LLMs
-    GROQ_LLM_MODEL:str = "openai/gpt-oss-120b"
+    GROQ_LLM_MODEL:str = "llama-3.3-70b-versatile"
     GROQ_API_KEY:str = ""
     LLM_PROVIDER : LLMProvider = LLMProvider.GROQ
 
@@ -25,7 +25,7 @@ class AppConfig(BaseSettings):
     TOP_K : int = 20
 
     ##rerank model
-    RERANK_MODEL:str = "rerank-multilingual-v3.0",
+    RERANK_MODEL:str = "rerank-multilingual-v3.0"
     RERANK_PROVIDER : RerankerProvider = RerankerProvider.COHERE
     TOP_N : int = 5
     
