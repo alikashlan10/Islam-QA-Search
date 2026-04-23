@@ -1,7 +1,5 @@
 from langchain_core.embeddings import Embeddings
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_cohere import CohereEmbeddings
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from src.domain.enums.embedder_provider import EmbedderProvider
 from src.logger.logger import setup_logger
 
