@@ -23,7 +23,7 @@ jobs:
       - name: Login to ACR
         uses: docker/login-action@v3
         with:
-          registry: islamqaregistry.azurecr.io
+          registry: islamqaacr.azurecr.io
           username: ${{ secrets.AZURE_REGISTRY_USERNAME }}
           password: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
 
@@ -32,15 +32,15 @@ jobs:
         with:
           context: .
           push: true
-          tags: islamqaregistry.azurecr.io/islam-qa-retrieval:${{ github.sha }}
+          tags: islamqaacr.azurecr.io/islam-qa-search:${{ github.sha }}
 
       - name: Deploy to Container Apps
         uses: azure/container-apps-deploy-action@v1
         with:
           resourceGroup: islam-qa-rg
-          containerAppName: islam-qa-retrieval
+          containerAppName: islam-qa-search
           containerAppEnvironment: islam-qa-env
-          imageToDeploy: islamqaregistry.azurecr.io/islam-qa-retrieval:${{ github.sha }}
+          imageToDeploy: islamqaacr.azurecr.io/islam-qa-search:${{ github.sha }}
           targetPort: 8000
           ingress: external
           environmentVariables: >
